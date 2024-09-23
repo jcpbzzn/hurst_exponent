@@ -15,7 +15,7 @@ The Hurst exponent depends on the period used for return calculation.
 The Hurst Exponent H is defined in terms of asymptotic behavior of the rescaled range as a function of the time span of the time series:
 
 $$
-E\left[\frac{R(n)}{S(n)}\right]
+E\left[\frac{R(n)}{S(n)}\right]=Cn^{H} \text{ as } n \to \infty
 $$
 
 
