@@ -92,8 +92,24 @@ $$
 
 Where:
 - $X_t$ is the process value at time $t$;
-- $\theta$ is the rate of mean reversion
-- $\mu$ is the long-term mean the process reverts to
-- $\sigma$ is the volatility
+- $\theta > 0$ is the rate of mean reversion
+- $\mu \in R$ is the long-term mean the process reverts to
+- $\sigma > 0$ is the volatility
 - $dW_t$ is the increment of a Wiener process
 
+This process is _Gaussian_, _Markovian_ and _Unconditionallly Stationary_.
+- _Gaussian_ --> Completely specified by its mean function and covariance function;
+- _Markovian_ --> Transitions between discrete states occur with fixed probabilities, and the transition probabilities depend only on the previous state, making it memoryless;
+- _Unconditionally Stationary_ --> Unconditional distribution (all moments) is invariant in time.
+
+The above SDE can be discretized using the Euler-Maruyama scheme:
+
+
+## References
+
+- [Ornstein-Uhlembeck Process](https://uregina.ca/~kozdron/Teaching/Regina/441Fall14/Notes/L31-32-Nov19.pdf)
+- [Gaussian Process](http://www0.cs.ucl.ac.uk/staff/j.shawe-taylor/courses/ATML-1.pdf)
+- [Markovian Process](https://www.sciencedirect.com/topics/chemistry/markovian-process#:~:text=A%20Markovian%20process%20is%20defined,Dynamics%20of%20Single%20Molecules%2C%202019)
+- [Euler-Maruyama](https://www.sfu.ca/~pft3/days/m3.pdf)
+- [Euler-Maruyama](https://www.youtube.com/watch?v=ePDInJYg714&t=1s)
+  
