@@ -1,4 +1,4 @@
-# Measuring Long-term memory of Time Series
+# Hurst Exponent
 
 ## Introduction
 
@@ -79,3 +79,21 @@ $$
 
 The Hurst exponent is estiated by fitting the power law $E\left[\frac{R(n)}{S(n)}\right]=Cn^{H}$ to the data. To do so, we can plot $\log{\frac{R(n)}{S(n)}}$ as a function of $\log{n}$.
 The regression coefficient is our estimate of $H_q$.
+
+## Simulating Time Series
+
+### Mean Reversion
+
+To simulate a mean reverting process we can use the Ornstein-Uhlenbeck process. The model is specified by the following SDE:
+
+$$
+dX_t = \theta(\mu - X_t)dt + \sigma dW_t
+$$
+
+Where:
+- $X_t$ is the process value at time $t$;
+- $\theta$ is the rate of mean reversion
+- $\mu$ is the long-term mean the process reverts to
+- $\sigma$ is the volatility
+- $dW_t$ is the increment of a Wiener process
+
