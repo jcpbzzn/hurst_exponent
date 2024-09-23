@@ -2,6 +2,8 @@
 
 ## Introduction
 
+### Definition
+
 The Hurst-Exponent is a measure of the long-term memory of time series.
 
 It was originally developed in hydrologyst Harold Edwin Hurst to model volatile rain and drought conditions observed over a long horizon, in order to determine optimal dam sizes for the Nile River.
@@ -25,6 +27,8 @@ Where:
 - $\text{n}$ is the timespan of the observation
 - $\text{c}$ is a constant
 
+### Interpretation
+
 The Hurst exponent ranges from 0 to 1:
 - Long-term switching between high and low values in adjacent pairs (Mean Reversion)
   - $0 \leq H_q < 0.5$
@@ -33,3 +37,30 @@ The Hurst exponent ranges from 0 to 1:
 - Long-term positive autocorrelation (Trend)
   - $0.5 < H_q \leq 1$
 
+### Estimation
+
+For each time series of length $\text{n}$, $X=X_1, X_2, ..., X_n$ the rescaled range is calculated as follows:
+
+Calculate the mean:
+
+$$
+m = \frac{1}{n} \sum_{i=1}^{n} X_i
+$$
+
+Center the series by subtracting the mean from each observation:
+
+$$
+Y_t = X_t-m \text{ for } t=1,2,...,n
+$$
+
+Calculate the cumulative deviate series:
+
+$$
+Z_t = \sum_{i=1}^{n} Y_i \text{ for } i=1,2,...,n
+$$
+
+Compute the Range $R(n)$:
+
+$$
+R(n) = \max{(Z_1,Z_2,...,Z_n)} - \min{(Z_1,Z_2,...,Z_n)}
+$$
