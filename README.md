@@ -1,4 +1,4 @@
-# Hurst Exponent
+# Measuring Long-term memory of Time Series
 
 ## Introduction
 
@@ -59,8 +59,23 @@ $$
 Z_t = \sum_{i=1}^{n} Y_i \text{ for } i=1,2,...,n
 $$
 
-Compute the Range $R(n)$:
+Compute the Range $R$:
 
 $$
 R(n) = \max{(Z_1,Z_2,...,Z_n)} - \min{(Z_1,Z_2,...,Z_n)}
 $$
+
+Compute the Standard Deviation $S$:
+
+$$
+S(n) = \sqrt{\frac{1}{n}\sum_{i=1}^{n}(x_i-m)^{2}}
+$$
+
+Calculate the rescaled range 
+
+$$
+\frac{R(n)}{S(n)}
+$$
+
+The Hurst exponent is estiated by fitting the power law $E\left[\frac{R(n)}{S(n)}\right]=Cn^{H}$ to the data. To do so, we can plot $\log{\frac{R(n)}{S(n)}}$ as a function of $\log{n}$.
+The regression coefficient is our estimate of $H_q$.
