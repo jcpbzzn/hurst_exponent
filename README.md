@@ -102,7 +102,19 @@ This process is _Gaussian_, _Markovian_ and _Unconditionallly Stationary_.
 - _Markovian_ --> Transitions between discrete states occur with fixed probabilities, and the transition probabilities depend only on the previous state, making it memoryless;
 - _Unconditionally Stationary_ --> Unconditional distribution (all moments) is invariant in time.
 
-The above SDE can be discretized using the Euler-Maruyama scheme:
+We can use the Euler-Maruyama method to derive the approximate numerical solution to the above SDE
+The above SDE can be approximated using a numerical solution.
+
+Given the following stochastic differential equation:
+
+$$
+dX_t = a(X_t,t)dt + b(X_t,t)dW_t
+$$
+
+Suppose the initial condition is $X_0 = x_0$, $W_t$ is a Wiener process, and we want to solve over a time interval $\left[0,T\right]$. 
+The Euler-Maruyama aproximation to the solution $X$ is the Markov chain $Y$ defined as follows:
+
+
 
 
 ## References
