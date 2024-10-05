@@ -113,9 +113,24 @@ $$
 
 Suppose the initial condition is $X_0 = x_0$, $W_t$ is a Wiener process, and we want to solve over a time interval $\left[0,T\right]$. 
 The Euler-Maruyama aproximation to the solution $X$ is the Markov chain $Y$ defined as follows:
+- Divide the interval $\left[0, T\right]$ into $N$ equal subintervals of width $\delta t>0$:
 
+$$
+0 = \tau_0 < \tau_1 < ... < \tau_N = T \text{ and } \delta t = T/N
+$$
 
+- Set $Y_0 = x_0$
+- Recursively define $Y_n$ for $0 \leq n \leq N-1$ by
 
+$$
+Y_{n+1} = Y_n + a(Y_n , \tau_n)\delta t + b(Y_n, \tau_n)\delta W_n
+$$
+
+where
+
+$$
+\delta W_n = W_{\tau_{n+1}} - W_{\tau_{n}}
+$$
 
 ## References
 
