@@ -132,6 +132,10 @@ $$
 \delta W_n = W_{\tau_{n+1}} - W_{\tau_{n}}
 $$
 
+$\delta W_n$ are independent and identically distributed random variables with mean zero and variance $\delta t$. 
+
+The random variables ΔWn are independent and identically distributed normal random variables with expected value zero and variance Δt.
+
 ## References
 
 - [Ornstein-Uhlembeck Process](https://uregina.ca/~kozdron/Teaching/Regina/441Fall14/Notes/L31-32-Nov19.pdf)
